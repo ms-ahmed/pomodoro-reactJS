@@ -1,0 +1,141 @@
+.App {
+    background-image: url("./img/pomodoro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 120wh;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 50%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+
+    .App-title {
+        grid-column-start: 2;
+        grid-row-start: 5;
+
+        h1 {
+            font-size: 90px;
+            text-align: center;
+        }
+    }
+
+    .Timers {
+        grid-column-start: 2;
+        grid-row-start: 6;
+
+        .container {
+            .time-rendering {
+                text-align: center;
+                font-size: 100px;
+                color: grey;
+            }
+
+            .buttons {
+                grid-column-start: 2;
+                grid-row-start: 5;
+                text-align: center;
+
+                .btn-start {
+                    border: none;
+                    margin: 2px;
+                    background-color: #a5c6a1;
+
+                    &:hover {
+                        background-color: #45eb03;
+                        font-weight: bold;
+                        opacity: 0.8;
+                    }
+                }
+
+                .btn-stop {
+                    border: none;
+                    margin: 2px;
+                    background-color: #dfae9c;
+
+                    &:hover {
+                        background-color: #fc1b04;
+                        font-weight: bold;
+                        opacity: 0.8;
+                        border: none;
+                    }
+                }
+
+                .btn-reset {
+                    border: none;
+                    margin: 2px;
+                    background-color: #f0faad;
+
+                    &:hover {
+                        background-color: #f3c611;
+                        font-weight: bold;
+                        opacity: 0.8;
+                        border: none;
+                    }
+                }
+
+                .btn-plus {
+                    border: none;
+                    margin: 2px;
+                    background-color: #bed1d0;
+
+                    &:hover {
+                        background-color: #94f6ef;
+                        font-weight: bold;
+                        opacity: 0.8;
+                        border: none;
+                    }
+                }
+
+                .btn-minus {
+                    border: none;
+                    margin: 2px;
+                    background-color: #ffa500;
+
+                    &:hover {
+                        background-color: #f38911;
+                        font-weight: bold;
+                        opacity: 0.8;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1091px) {
+    .App {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .Timers {
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                .buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .App-title {
+        h1 {
+            font-size: 65px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .App-title {
+        h1 {
+            font-size: 45px !important;
+        }
+    }
+}
